@@ -1,0 +1,56 @@
+.RecastApp .RecastAppChat {
+  // position: relative; // MU: modified (was: fixed)
+  // top: 0; // MU : commented
+  // left: 0; // MU : commented
+  width: 100%; // MU : commented
+  height: 100%; // MU : commented
+  z-index: 2147483647;
+
+  font-size: 16px;
+
+  &--content {
+    position: relative;
+    height: calc(100% - 100px); // MU: modified (was 100% - 100px)
+  }
+
+  &--slogan {
+    padding: 0.2rem;
+    padding-bottom: 0.5rem;
+    font-size: 14px;
+    font-weight: bold;
+
+    text-align: center;
+    color: lightgrey;
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+
+    opacity: 1;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+
+  &--slogan--hidden {
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+}
+
+// @media only screen and (min-width: 420px) and (min-height: 575px) {  // MU : commented
+  .RecastApp .RecastAppChat {
+    position: relative; 
+    // right: 15vw; // MU: modified (was: 10px)
+    bottom: unset; // MU: modified (was: 10px)
+    border-radius: 3px;
+    // top: 10px; // MU: modified (was: unset)
+    // left: 15vw; // MU: modified (was: unset)
+    // width: 70vw; // MU: modified (was 370px)
+    // height: 500px;
+    // box-shadow: 0 5px 40px rgba(0, 0, 0, 0.16); // MU : commented
+
+    &--slogan {
+      margin-bottom: 0;
+    }
+  }
+// } // MU : commented

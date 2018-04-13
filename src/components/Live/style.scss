@@ -1,0 +1,21 @@
+.RecastApp .RecastAppLive {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  // background-color: rgba(21, 130, 220, 1); // MU: added
+
+  overflow-y: scroll;
+
+  &--message-container {
+    flex-grow: 1;
+    padding-bottom: 25px;
+    padding-top: 25px; // MU: added
+  }
+}
+
+@media only screen and (min-width: 420px) and (min-height: 575px) {
+  .RecastApp .RecastAppLive {
+    height: 50vh; // MU: modified (was 460px)
+  }
+}
