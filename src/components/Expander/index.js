@@ -6,10 +6,10 @@ import './style.scss'
 const Expander = ({ onClick, preferences, style }) => (
   <div
     onClick={onClick}
-    className="RecastAppExpander"
+    className="RecastAppExpander btn btn-warning" // MU: added bootstrap buttons
     style={{
-      color: preferences.complementaryColor,
-      backgroundColor: preferences.accentColor,
+      // color: preferences.complementaryColor, // MU: commented
+      // backgroundColor: preferences.accentColor, // MU: commented
       ...style,
     }}
   >
