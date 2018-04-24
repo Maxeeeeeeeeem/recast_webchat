@@ -24,9 +24,9 @@ class Input extends Component {
 
   render() {
     const { value } = this.state
-
+    // MU: removed "animated fadeInUp"
     return (
-      <div className="RecastAppInput animated fadeInUp">
+      <div className="RecastAppInput"> 
         <form onSubmit={this.sendMessage}>
           <input
             ref={i => (this._input = i)}

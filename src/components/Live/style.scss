@@ -10,12 +10,11 @@
   &--message-container {
     flex-grow: 1;
     padding-bottom: 25px;
-    padding-top: 25px; // MU: added
   }
 }
 
 @media only screen and (min-width: 420px) and (min-height: 575px) {
   .RecastApp .RecastAppLive {
-    height: 50vh; // MU: modified (was 460px)
+    // height: 50vh; // MU: modified & removed (was 460px)
   }
 }
