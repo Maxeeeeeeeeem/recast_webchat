@@ -1,14 +1,15 @@
 .RecastApp .RecastAppInput {
   position: absolute;
-  bottom: 0;
+  bottom: 1px; // MU: modified (was: 0 => prevent added border)
   width: 100%;
 
   padding: 1rem;
   color: #9e9fa3;
   background: white;
-  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.16); // MU: modified (was 0.16)
+  border-top: 1px solid #c79d4c; // MU: added
+  //box-shadow: 0 5px 40px rgba(0, 0, 0, 0.16); // MU: modified (was 0.16) and commented
 
-  border-radius: 5px; // MU: added
+  border-radius: 3px; // MU: added
 }
 
 @media only screen and (min-width: 420px) and (min-height: 575px) {

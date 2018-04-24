@@ -17,6 +17,13 @@ const token = script.getAttribute('token')
 
 if (root && channelId && token) {
   getChannelPreferences(channelId, token).then(preferences => {
+
+  	// MU: overriding preferences
+	preferences.botPicture = "https://res.cloudinary.com/hz4pj1unt/image/upload/c_scale,h_133,w_133/v1524550940/brand/IconeEdmonRVB_Ocre.png"
+	preferences.userPicture = "https://res.cloudinary.com/hz4pj1unt/image/upload/c_scale,w_133/v1524551016/website_assets/avatar.jpg"
+	// preferences. ...
+
+
     ReactDOM.render(
       <Provider store={store}>
         <App token={token} channelId={channelId} preferences={preferences} />

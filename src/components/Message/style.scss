@@ -12,11 +12,12 @@
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  margin: 1rem 0.5rem;
+  margin: 1rem 1rem 0rem 0rem;
   width: -webkit-fit-content;
   width: fit-content;
   width: -moz-fit-content;
   position: relative;
+  line-height: 160%; // MU: modified
 
   &--logo {
     width: 35px;
@@ -126,7 +127,7 @@
 
   .RecastAppText {
     max-width: 100%; // MU: modified (was 270px)
-    padding: 0.8rem;
+    padding: 1.5rem; // MU: modified (was 0.8rem)
     border-radius: 3px;
 
     white-space: pre-wrap;
