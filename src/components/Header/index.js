@@ -16,7 +16,7 @@ const Header = ({ closeWebchat, preferences, logoStyle }) => (
     <div className="RecastAppHeader--title">{preferences.headerTitle}</div>
 
     <div className="RecastAppHeader--btn" onClick={closeWebchat}>
-      <img src="https://cdn.recast.ai/webchat/close.svg" />
+      <img src={preferences.closeButton} />
     </div>
   </div>
 )

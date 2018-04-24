@@ -18,10 +18,46 @@ const token = script.getAttribute('token')
 if (root && channelId && token) {
   getChannelPreferences(channelId, token).then(preferences => {
 
-  	// MU: overriding preferences
-	preferences.botPicture = "https://res.cloudinary.com/hz4pj1unt/image/upload/c_scale,h_133,w_133/v1524550940/brand/IconeEdmonRVB_Ocre.png"
-	preferences.userPicture = "https://res.cloudinary.com/hz4pj1unt/image/upload/c_scale,w_133/v1524551016/website_assets/avatar.jpg"
-	// preferences. ...
+    // MU: overriding preferences
+
+    // expanded chat or not (must be above 768px)
+    // get screen size from printed var
+    var screenWidth = parseInt($("#screen").attr('windowWidth'));
+    if (screenWidth > 768 || screenWidth === undefined) {
+      // systematically expand if screen size larger than 768
+      // or no given screensize
+      preferences.openingType = "always" // ("always" | "never" | "memory")
+    } else {
+      // expand or not based on last state if larger than 768
+      preferences.openingType = "memory" // ("always" | "never" | "memory")
+    }
+
+  	// preferences.conversationTimeToLive
+    preferences.onboardingMessage = "Posez votre question fiscale !"
+
+    // style : (TODO)
+    preferences.complementaryColor = "#FFFFFF"
+    preferences.accentColor = "#c79d4c"
+    preferences.backgroundColor = "#F2F2F2"
+    
+    // Expander (white)
+    preferences.expanderLogo = "https://res.cloudinary.com/hz4pj1unt/image/upload/c_scale,h_133,w_133/v1524563757/brand/IconeEdmonRVB_Blanc.png"
+    preferences.expanderTitle = "Commencer l'expérience EDMON"
+    
+    // header (< 768px)
+    preferences.headerLogo = preferences.expanderLogo
+    preferences.headerTitle = "Discussion avec votre Conseiller Patrimonial"
+
+    // Chat
+    preferences.botPicture = "https://res.cloudinary.com/hz4pj1unt/image/upload/c_scale,h_133,w_133/v1524550940/brand/IconeEdmonRVB_Ocre.png"
+    preferences.userPicture = "https://res.cloudinary.com/hz4pj1unt/image/upload/c_scale,w_133/v1524551016/website_assets/avatar.jpg"
+    // preferences.welcomeMessage = "Bonjour, je suis Edmon, je peux répondre à vos questions fiscales."
+    
+    // added Override
+    preferences.closeButton = "https://cdn.recast.ai/webchat/close.svg"
+
+    // not implemented
+    // preferences.breakpoint = "768px"
 
 
     ReactDOM.render(

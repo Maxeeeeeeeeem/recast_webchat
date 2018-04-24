@@ -1,5 +1,13 @@
 .RecastApp .RecastAppHeader {
-  display: none; // MU: modifed (was: flex)
+  
+  // MU: added
+  @media only screen and (min-width: 767px) { 
+    display: none;
+  }
+  margin-top: 60px;
+  // \ MU: added
+
+  display: flex;
   align-items: center;
   border-radius: 0;
 
