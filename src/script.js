@@ -39,6 +39,14 @@ if (root && channelId && token) {
     preferences.complementaryColor = "#FFFFFF"
     preferences.accentColor = "#c79d4c"
     preferences.backgroundColor = "#F2F2F2"
+
+    if (screenWidth > 768 || screenWidth === undefined) {
+      // for desktop view
+      preferences.botMessageColor = "#6f7076"
+    } else {
+      // for mobile view
+      preferences.botMessageColor = "#4a4b4f"
+    }
     
     // Expander (white)
     preferences.expanderLogo = "https://res.cloudinary.com/hz4pj1unt/image/upload/c_scale,h_133,w_133/v1524563757/brand/IconeEdmonRVB_Blanc.png"
@@ -49,8 +57,13 @@ if (root && channelId && token) {
     preferences.headerTitle = "Discussion avec votre Conseiller Patrimonial"
 
     // Chat
+    var userPicture = $("#visitor-avatar").attr('content');
+    if (userPicture === undefined) {
+      preferences.userPicture = "https://res.cloudinary.com/hz4pj1unt/image/upload/c_scale,w_133/v1524551016/website_assets/avatar.jpg"
+    } else {
+      preferences.userPicture = userPicture
+    }
     preferences.botPicture = "https://res.cloudinary.com/hz4pj1unt/image/upload/c_scale,h_133,w_133/v1524550940/brand/IconeEdmonRVB_Ocre.png"
-    preferences.userPicture = "https://res.cloudinary.com/hz4pj1unt/image/upload/c_scale,w_133/v1524551016/website_assets/avatar.jpg"
     // preferences.welcomeMessage = "Bonjour, je suis Edmon, je peux répondre à vos questions fiscales."
     
     // added Override

@@ -39,6 +39,7 @@
 
 @media only screen and (min-width: 767px) {  // MU : modified 420px => 768px
   .RecastApp .RecastAppChat {
+    
     position: relative; 
     // right: 15vw; // MU: modified (was: 10px)
     // bottom: unset; // MU: removed (was: 10px)
@@ -48,7 +49,6 @@
     // width: 70vw; // MU: modified (was 370px)
     height: calc(100vh - 125px); // MU: modified (was 500px)
     // box-shadow: 0 5px 40px rgba(0, 0, 0, 0.16); // MU : commented
-
     &--slogan {
       margin-bottom: 0;
     }
