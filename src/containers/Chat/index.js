@@ -187,6 +187,26 @@ class Chat extends Component {
     } = this.props
     const { showSlogan, messages } = this.state
 
+    // MU: added => call API to assign conversation to current user
+    if (this.props.conversationId != '') { // if the conversationId is set
+      if ( $('.recast-webchat').attr('user') != '' ) { // if user connected
+        if ( $('.recast-webchat').attr('conversation') == '' ) { // if conversation-id is not already printed to view
+          // read user & token from view
+          var user_token = $('.recast-webchat').attr('user');
+          var user_email = $("#user-details-email").attr('content');
+          // call API to assign conversation to user
+          var headers = { 'Content-Type': 'application/json', 'X-User-Email': user_email, 'X-User-Token': user_token };
+          var body = JSON.stringify({ conversation: { id: this.props.conversationId } })
+          fetch('/api/v1/assign_conversation', { method: 'POST', headers: headers, body: body })
+          // print conversation-id to view
+          $('.recast-webchat').attr('conversation', this.props.conversationId);
+        } // else console.log("conversation_id already printed to view");
+      } else {
+        // write conversation id anyway
+        $('.recast-webchat').attr('conversation', this.props.conversationId);
+      }
+    } // else console.log("conversation_id is not set");
+
     return (
       <div
         className="RecastAppChat"

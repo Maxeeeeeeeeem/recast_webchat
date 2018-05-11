@@ -124,7 +124,7 @@ class App extends Component {
     const { expanded } = this.state
 
     return (
-      <div className="RecastApp">
+      <div className="RecastApp" >
         <link
           rel="stylesheet"
           type="text/css"

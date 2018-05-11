@@ -56,15 +56,28 @@ if (root && channelId && token) {
     preferences.headerLogo = preferences.expanderLogo
     preferences.headerTitle = "Discussion avec votre Conseiller Patrimonial"
 
-    // Chat
-    var userPicture = $("#visitor-avatar").attr('content');
+    // bot picture
+    preferences.botPicture = "https://res.cloudinary.com/hz4pj1unt/image/upload/c_scale,h_133,w_133/v1524550940/brand/IconeEdmonRVB_Ocre.png"
+
+    // USER DETAILS
+
+    // Avatar
+    var userPicture = $("#user-details-avatar").attr('content');
     if (userPicture === undefined) {
-      preferences.userPicture = "https://res.cloudinary.com/hz4pj1unt/image/upload/c_scale,w_133/v1524551016/website_assets/avatar.jpg"
+      // use default userPicture
+      // preferences.userPicture = "https://res.cloudinary.com/hz4pj1unt/image/upload/c_scale,w_133/v1524551016/website_assets/avatar.jpg"
     } else {
       preferences.userPicture = userPicture
     }
-    preferences.botPicture = "https://res.cloudinary.com/hz4pj1unt/image/upload/c_scale,h_133,w_133/v1524550940/brand/IconeEdmonRVB_Ocre.png"
-    // preferences.welcomeMessage = "Bonjour, je suis Edmon, je peux répondre à vos questions fiscales."
+
+    // Welcome Message
+    var userWelcomeMessage = $("#user-details-welcome-message").attr('content');
+    if (userWelcomeMessage === undefined) {
+      // use default message
+      // preferences.welcomeMessage = "Bonjour, je suis Edmon, je peux répondre à vos questions fiscales."
+    } else {
+      preferences.welcomeMessage = userWelcomeMessage
+    }
     
     // added Override
     preferences.closeButton = "https://cdn.recast.ai/webchat/close.svg"
