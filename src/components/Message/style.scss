@@ -12,7 +12,7 @@
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  margin: 1rem 1rem 0rem 0rem;
+  margin: 0.5rem 1rem 0.5rem 0rem;
   width: -webkit-fit-content;
   width: fit-content;
   width: -moz-fit-content;
@@ -158,8 +158,10 @@
     display: flex;
     flex-direction: column;
 
+
     &--slider {
       margin-top: 0.5rem;
+      margin-bottom: 0.5rem; // MU: added
       max-width: 420px; // MU: modified (was: 290px)
     }
 
