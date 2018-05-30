@@ -80,10 +80,12 @@
     max-width: 430px; // MU: modified (was: 300px)
 
     .Arrow {
+      
       width: 25px;
       height: 25px;
 
       display: flex !important;
+
       align-items: center;
       justify-content: center;
 
@@ -165,7 +167,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-
+      
+      width: initial !important; // MU: added
       max-height: 30px;
       padding: 1rem;
       margin-left: 0.5rem;

@@ -26,14 +26,47 @@ class QuickReplies extends Component {
     const { displayQuickReplies } = this.state
     const { title, buttons } = content
 
+    // MU: replaced return method (removed arrows & variableWidth)
+
+    // return (
+    //   <div className={'RecastAppQuickReplies'}>
+    //     <Text content={title} style={style} />
+
+    //     {displayQuickReplies && (
+    //       <Slider
+    //         arrows
+    //         variableWidth
+    //         speed={200}
+    //         infinite={false}
+    //         draggable={false}
+    //         slidesToScroll={2}
+    //         prevArrow={<PrevArrow />}
+    //         nextArrow={<NextArrow />}
+    //         className="RecastAppSlider RecastAppQuickReplies--slider"
+    //       >
+    //         {buttons.map((b, i) => (
+    //           <div
+    //             key={i}
+    //             className="RecastAppQuickReplies--button"
+    //             onClick={() => this.doSendMessage({ type: 'text', content: b.value })}
+    //             style={{
+    //               border: `1px solid ${style.accentColor}`,
+    //               color: style.accentColor,
+    //             }}
+    //           >
+    //             {truncate(b.title, 20)}
+    //           </div>
+    //         ))}
+    //       </Slider>
+    //     )}
+    //   </div>
+    // )
     return (
       <div className={'RecastAppQuickReplies'}>
         <Text content={title} style={style} />
 
         {displayQuickReplies && (
           <Slider
-            arrows
-            variableWidth
             speed={200}
             infinite={false}
             draggable={false}

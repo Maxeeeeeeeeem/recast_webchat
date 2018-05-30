@@ -54,7 +54,7 @@ if (root && channelId && token) {
     
     // header (< 768px)
     preferences.headerLogo = preferences.expanderLogo
-    preferences.headerTitle = "Discussion avec votre Conseiller Patrimonial"
+    preferences.headerTitle = "Discussion avec votre Conseiller Fiscal"
 
     // bot picture
     preferences.botPicture = "https://res.cloudinary.com/hz4pj1unt/image/upload/c_scale,h_133,w_133/v1524550940/brand/IconeEdmonRVB_Ocre.png"
