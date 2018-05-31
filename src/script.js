@@ -12,7 +12,7 @@ import App from 'containers/App'
 const root = document.getElementById('recast-webchat-div')
 const script = document.currentScript || document.getElementById('recast-webchat')
 
-const channelId = script.getAttribute('channelId')
+const channelId = script.getAttribute('channel_id')
 const token = script.getAttribute('token')
 
 if (root && channelId && token) {
